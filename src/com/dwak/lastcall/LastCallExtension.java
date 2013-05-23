@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.CallLog;
-import android.provider.Contacts;
+import android.provider.ContactsContract.PhoneLookup;
 import android.util.Log;
 
 import com.google.android.apps.dashclock.api.DashClockExtension;
@@ -23,10 +23,18 @@ public class LastCallExtension extends DashClockExtension{
 		// TODO Auto-generated method stub
 		String[] projection = new String[]{CallLog.Calls.NUMBER};
 		Cursor cur = getContentResolver().query(CallLog.Calls.CONTENT_URI, projection, null, null, CallLog.Calls.DATE +" desc");
+
 		try{
 			cur.moveToFirst();
 			lastCallNumber = cur.getString(0);
+			Uri uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI, Uri.encode("tel:"+lastCallNumber));
+			Cursor cur2 = getContentResolver().query(uri, new String[]{PhoneLookup.DISPLAY_NAME},null,null,null);
+			cur2.moveToFirst();
+			lastCallName = cur2.getString(0);
+			
 			Log.v(TAG,lastCallNumber);
+			Log.v(TAG,lastCallName);
+			
 		}
 		finally{
 			cur.close();
@@ -38,8 +46,8 @@ public class LastCallExtension extends DashClockExtension{
 		publishUpdate(new ExtensionData()
 		.visible(true)
 		.icon(R.drawable.ic_launcher)
-		.status(lastCallNumber)
-		.expandedTitle(lastCallNumber)
+		.status(lastCallName)
+		.expandedTitle(lastCallName +": ("+lastCallNumber+")")
 		.expandedBody("Click to dial!")
 		.clickIntent(dialIntent));
 	}
