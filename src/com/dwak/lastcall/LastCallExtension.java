@@ -28,9 +28,19 @@ public class LastCallExtension extends DashClockExtension{
 			cur.moveToFirst();
 			lastCallNumber = cur.getString(0);
 			Uri uri = Uri.withAppendedPath(PhoneLookup.CONTENT_FILTER_URI, Uri.encode("tel:"+lastCallNumber));
-			Cursor cur2 = getContentResolver().query(uri, new String[]{PhoneLookup.DISPLAY_NAME},null,null,null);
-			cur2.moveToFirst();
-			lastCallName = cur2.getString(0);
+			cur2 = getContentResolver().query(uri, new String[]{PhoneLookup.DISPLAY_NAME},null,null,null);
+			
+			if( cur2 != null ){
+			    if( cur2.moveToFirst() ){
+			        lastCallName = cur2.getString(0);
+			    }
+			    else{
+			    	lastCallName="Unknown";
+			    }
+			}
+			else{
+				lastCallName = "Unknown";
+			}
 			
 			Log.v(TAG,lastCallNumber);
 			Log.v(TAG,lastCallName);
@@ -38,6 +48,7 @@ public class LastCallExtension extends DashClockExtension{
 		}
 		finally{
 			cur.close();
+			cur2.close();
 		}
 
 		Intent dialIntent = new Intent(Intent.ACTION_DIAL);
