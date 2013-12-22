@@ -18,9 +18,9 @@ public class LastCallExtension extends DashClockExtension{
 	private ContentResolver resolver;
 	private String lastCallName;
 	private Cursor cur2;
+	public static final String PREF_DIAL= "pref_dial";
 	@Override
 	protected void onUpdateData(int arg0) {
-		// TODO Auto-generated method stub
 		String[] projection = new String[]{CallLog.Calls.NUMBER};
 		Cursor cur = getContentResolver().query(CallLog.Calls.CONTENT_URI, projection, null, null, CallLog.Calls.DATE +" desc");
 
@@ -48,7 +48,8 @@ public class LastCallExtension extends DashClockExtension{
 		}
 		finally{
 			cur.close();
-			cur2.close();
+			if( cur2 != null)
+				cur2.close();
 		}
 
 		Intent dialIntent = new Intent(Intent.ACTION_DIAL);
