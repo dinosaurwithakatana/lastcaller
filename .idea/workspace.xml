@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5937ef2e-ceef-4aad-81ca-7c2031bc6fdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dwak/lastcall/LastCallExtension.java" afterPath="$PROJECT_DIR$/src/com/dwak/lastcall/LastCallExtension.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dwak/lastcall/LastCallPreferences.java" afterPath="$PROJECT_DIR$/src/com/dwak/lastcall/LastCallPreferences.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/prefs.xml" afterPath="$PROJECT_DIR$/res/xml/prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LastCall.iws" />
@@ -102,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LastCallExtension.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LastCallExtension.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dwak/lastcall/LastCallExtension.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="89" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.46107784" vertical-offset="939" max-vertical-offset="1620">
+            <state line="65" column="89" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1620">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2369#2398#0" expanded="true" />
@@ -114,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="25" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="936">
+            <state line="2" column="25" selection-start="126" selection-end="126" vertical-scroll-proportion="0.07185629" vertical-offset="0" max-vertical-offset="936">
               <folding />
             </state>
           </provider>
@@ -129,6 +124,10 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="$USER_HOME$/android/signed.keystore" />
+    <option name="KEY_ALIAS" value="dwak" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -274,7 +273,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/dashclock-api-r1.1.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/android/signed.keystore" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -283,6 +282,9 @@
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.1.86:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="gb" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="ExportedModule" value="LastCall" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/LastCall.apk" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.Lastcall">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -553,20 +555,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="25" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dwak/lastcall/LastCallExtension.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="89" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.46107784" vertical-offset="939" max-vertical-offset="1620">
+        <state line="65" column="89" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1620">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2369#2398#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="126" selection-end="126" vertical-scroll-proportion="0.07185629" vertical-offset="0" max-vertical-offset="936">
+          <folding />
         </state>
       </provider>
     </entry>
