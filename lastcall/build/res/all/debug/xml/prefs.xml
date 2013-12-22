@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <CheckBoxPreference
+            android:title="@string/pref_dial_title"
+            android:enabled="true"
+            android:defaultValue="false"
+            android:key="@string/pref_dial"
+            android:summary="@string/pref_dial_desc"/>
+</PreferenceScreen>
+<!-- From: file:/home/vishnu/Projects/LastCall/lastcall/src/main/res/xml/prefs.xml -->
