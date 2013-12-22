@@ -7,3 +7,6 @@ lint.xml
 .swp
 LastCall.apk
 LastCaller.apk
+.gradle/
+gradle/
+local.properties

@@ -1,0 +1,12 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1369167037000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /home/vishnu/Projects/LastCall/lastcall/src/main/res/values/styles.xml
+1387727654000 389 e2433902eca1a4177257033cc81325cf03e55fcf /home/vishnu/Projects/LastCall/lastcall/src/main/res/xml/prefs.xml
+1369167037000 1112 0a7b7a2d1de50d1dc23646d1f404623db20eb4e8 /home/vishnu/Projects/LastCall/lastcall/src/main/res/drawable-hdpi/ic_launcher.png
+1369167037000 381 b129b276e01126de5b3b753572ac67cbfc19454c /home/vishnu/Projects/LastCall/lastcall/src/main/res/values-v14/styles.xml
+1369167037000 324 aa1f5f1723de9aee2669dc44a26fbc0ce776d35f /home/vishnu/Projects/LastCall/lastcall/src/main/res/values-v11/styles.xml
+1369167037000 1517 9bccb94715802fff9d641240dce4715e8badacc6 /home/vishnu/Projects/LastCall/lastcall/src/main/res/drawable-xhdpi/ic_launcher.png
+1369167037000 769 ca79277ee671ec4f70686bd3e1d43707981ee762 /home/vishnu/Projects/LastCall/lastcall/src/main/res/drawable-mdpi/ic_launcher.png
+1369167037000 2412 2e07f2ae61e7dbf5402c7bd15dadd337a90eb60d /home/vishnu/Projects/LastCall/lastcall/src/main/res/drawable-xxhdpi/ic_launcher.png
+1387727680000 422 f0dd4f04d028b22598f3cb1c3e5f7e8cfa6e7b2c /home/vishnu/Projects/LastCall/lastcall/src/main/res/values/strings.xml

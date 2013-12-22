@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LastCall.iml" filepath="$PROJECT_DIR$/LastCall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lastcall/lastcall.iml" filepath="$PROJECT_DIR$/lastcall/lastcall.iml" />
     </modules>
   </component>
 </project>
