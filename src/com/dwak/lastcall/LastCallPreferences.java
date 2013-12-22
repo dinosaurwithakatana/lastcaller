@@ -1,5 +1,6 @@
 package com.dwak.lastcall;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
@@ -74,7 +75,8 @@ public class LastCallPreferences extends PreferenceActivity {
 				// For list preferences, look up the correct display value in
 				// the preference's 'entries' list.
 				Log.v("Pref","Check toggled " + value.toString());
-
+                SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(preference.getContext()).edit();
+                editor.putBoolean("pref_dial", ((Boolean)value).booleanValue());
 				// Set the summary to reflect the new value.
 			}
 			return true;

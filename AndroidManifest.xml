@@ -9,6 +9,7 @@
 
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -31,10 +32,10 @@
                 android:name="description"
                 android:value="@string/app_desc" >
             </meta-data>
-            <meta-data
-                android:name="settingsActivity"
-                android:value=".LastCallPreferences" >
-            </meta-data>
+            <!--<meta-data-->
+                <!--android:name="settingsActivity"-->
+                <!--android:value=".LastCallPreferences" >-->
+            <!--</meta-data>-->
         </service>
 
         <activity
