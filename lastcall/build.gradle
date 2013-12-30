@@ -1,29 +1,72 @@
 buildscript {
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath 'com.android.tools.build:gradle:0.6.+'
-	}
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
 }
 
 apply plugin: 'android'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 android {
-	compileSdkVersion 17
-	buildToolsVersion "18.0.1"
-	
-	defaultConfig {
-		minSdkVersion 17
-		targetSdkVersion 17
-	}
+    compileSdkVersion 19
+    buildToolsVersion "18.0.1"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 19
+    }
+
+    signingConfigs {
+        release {
+			// We can leave these in environment variables
+            storeFile file(System.getenv("KEYSTORE"))
+            keyAlias System.getenv("KEY_ALIAS")
+
+            // These two lines make gradle believe that the signingConfigs
+            // section is complete. Without them, tasks like installRelease
+            // will not be available!
+            storePassword "notYourRealPassword"
+            keyPassword "notYourRealPassword"
+
+            /*storeFile file(System.console().readLine("\n\$ Enter keystore path: "))*/
+            /*storePassword System.console().readLine("\n\$ Enter keystore password: ")*/
+            /*keyAlias System.console().readLine("\n\$ Enter key alias: ")*/
+            /*keyPassword System.console().readLine("\n\$ Enter key password: ")*/
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+    }
+
 }
 
 dependencies {
-	compile 'com.google.android.apps.dashclock:dashclock-api:+'
-	compile 'com.android.support:support-v4:+'
+    compile 'com.google.android.apps.dashclock:dashclock-api:+'
+    compile 'com.android.support:support-v4:+'
+}
+
+task askForPasswords << {
+    // Must create String because System.readPassword() returns char[]
+    // (and assigning that below fails silently)
+    def storePw = new String(System.console().readPassword("\nKeystore password: "))
+    def keyPw  = new String(System.console().readPassword("\nKey password: "))
+
+    android.signingConfigs.release.storePassword = storePw
+    android.signingConfigs.release.keyPassword = keyPw
+}
+
+tasks.whenTaskAdded { theTask -> 
+    if (theTask.name.equals("packageRelease")) {
+        theTask.dependsOn "askForPasswords"
+    }
 }

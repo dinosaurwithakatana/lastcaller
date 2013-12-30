@@ -3,7 +3,7 @@
     <string name="app_name">LastCaller</string>
     <string name="app_desc">Displays the last call, and dials it when clicked</string>
     <string name="pref_dial_title">Directly dial the number</string>
-    <string name="pref_dial_desc">On to dial, off to queue the number</string>
+    <string name="pref_dial_desc">On to direct dial, off to queue the number</string>
     <string name="title_settings">LastCaller Settings</string>
     <string name="pref_dial">pref_dial</string>
 
