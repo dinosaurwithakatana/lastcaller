@@ -1,0 +1,2 @@
+keystore.props.file=../keystore.properties
+readability.props.file=../readability.properties
