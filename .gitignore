@@ -9,7 +9,6 @@ lint.xml
 LastCall.apk
 LastCaller.apk
 .gradle/
-gradle/
 local.properties
 keystore.properties
 .idea/
