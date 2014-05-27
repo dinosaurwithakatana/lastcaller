@@ -1,5 +1,6 @@
 LastCaller
 =========
+[![Build Status](https://travis-ci.org/dinosaurwithakatana/lastcaller.svg?branch=master)](https://travis-ci.org/dinosaurwithakatana/lastcaller)
 
 ![Screenshot of the app](https://github.com/dinosaurwithakatana/lastcaller/raw/master/screenshots/screen1.png)
 ![Screenshot of the app](https://github.com/dinosaurwithakatana/lastcaller/raw/master/screenshots/screen2.png)
