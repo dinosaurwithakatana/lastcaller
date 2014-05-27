@@ -1,0 +1,17 @@
+language: android
+jdk: oraclejdk7
+env:
+  matrix:
+    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
+
+android:
+  components:
+    - build-tools-19.0.3
+
+before_script:
+    - cp keystore.properties.example keystore.properties
+    - cp readability.properties.example readability.properties
+    - cp local.properties.example local.properties
+    - ls *.properties
+    - echo $ANDROID_HOME
+script: ./gradlew clean assembleTravis
