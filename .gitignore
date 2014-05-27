@@ -1,3 +1,4 @@
+build/
 bin
 .settings
 .project
@@ -10,5 +11,6 @@ LastCaller.apk
 .gradle/
 gradle/
 local.properties
+keystore.properties
 .idea/
 .iml

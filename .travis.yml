@@ -13,4 +13,5 @@ before_script:
     - cp local.properties.example local.properties
     - ls *.properties
     - echo $ANDROID_HOME
-script: ./gradlew clean assembleTravis
+
+script: ./gradlew clean assembleDebug
