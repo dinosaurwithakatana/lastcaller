@@ -10,5 +10,3 @@ LastCaller.apk
 .gradle/
 gradle/
 local.properties
-.idea/
-*.iml
