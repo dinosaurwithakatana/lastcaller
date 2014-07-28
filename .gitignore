@@ -12,4 +12,4 @@ LastCaller.apk
 local.properties
 keystore.properties
 .idea/
-.iml
+*.iml

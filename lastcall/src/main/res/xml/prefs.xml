@@ -6,4 +6,10 @@
             android:defaultValue="false"
             android:key="@string/pref_dial"
             android:summary="@string/pref_dial_desc"/>
+    <CheckBoxPreference
+        android:title="@string/display_time"
+        android:enabled="true"
+        android:defaultValue="false"
+        android:key="@string/pref_display_time"
+        android:summary="@string/display_time_desc"/>
 </PreferenceScreen>

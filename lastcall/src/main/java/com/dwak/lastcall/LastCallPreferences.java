@@ -42,6 +42,7 @@ public class LastCallPreferences extends PreferenceActivity {
 		// their values. When their values change, their summaries are updated
 		// to reflect the new value, per the Android Design guidelines.
 		bindPreferenceSummaryToValue(findPreference(LastCallExtension.PREF_DIAL));
+        bindPreferenceSummaryToValue(findPreference(LastCallExtension.PREF_DISPLAY_TIME));
 	}
 
 	/**
@@ -74,9 +75,9 @@ public class LastCallPreferences extends PreferenceActivity {
 			if (preference instanceof CheckBoxPreference) {
 				// For list preferences, look up the correct display value in
 				// the preference's 'entries' list.
-				Log.v("Pref","Check toggled " + value.toString());
+				Log.v("Pref","Check toggled " + preference.getKey() + " " + value.toString());
                 SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(preference.getContext()).edit();
-                editor.putBoolean("pref_dial", ((Boolean)value).booleanValue());
+                editor.putBoolean("pref_dial", (Boolean) value);
 				// Set the summary to reflect the new value.
 			}
 			return true;
