@@ -13,7 +13,7 @@ script: "./gradlew clean assembleDebug"
 deploy:
   provider: releases
   api_key:
-    secure: MeGKfVwOrIMT5TzI5tBhwfCH7tICedcJe0p5Cp3lyPhY26VlVJQ2HKH3yuv7OF9a6ngVWdBjxPtn2dDlWb3AqpPZDEwgzCJrYjaDlBfhk3JSdepKmhEltbcvFWyPgWGNVGWw3+EmDiDrmscKjF9kc0F06KveRziJb8JC3RBIDIk=
+    secure: Y5kfBQn9BMiDmgDjl0ypKVZfVuVvUTtwFVIZ6GoBnbl0q+iUDHLhBngmbUOymcLE9dA15kZCZgYN+zW/eYl0Y75n98KWeYyYzVtLapiI9CM3+yLW3N/rzREWdJ3NLI57G2yeKtOhOhwtPsxizGhOJ2HwPa+SNGinf03s9NgtS7s=
   file: ${TRAVIS_BUILD_DIR}/lastcall/build/outputs/apk/lastcall-debug.apk
   on:
     repo: dinosaurwithakatana/lastcaller
