@@ -2,16 +2,21 @@ language: android
 jdk: oraclejdk7
 env:
   matrix:
-    - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
-
+  - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
 android:
   components:
-    - build-tools-19.0.3
-
+  - build-tools-19.1
 before_script:
-    - cp keystore.properties.example keystore.properties
-    - cp local.properties.example local.properties
-    - ls *.properties
-    - echo $ANDROID_HOME
-
-script: ./gradlew clean assembleDebug
+- cp keystore.properties.example keystore.properties
+- cp local.properties.example local.properties
+script: "./gradlew clean assembleDebug"
+deploy:
+  provider: releases
+  api_key:
+    secure: MeGKfVwOrIMT5TzI5tBhwfCH7tICedcJe0p5Cp3lyPhY26VlVJQ2HKH3yuv7OF9a6ngVWdBjxPtn2dDlWb3AqpPZDEwgzCJrYjaDlBfhk3JSdepKmhEltbcvFWyPgWGNVGWw3+EmDiDrmscKjF9kc0F06KveRziJb8JC3RBIDIk=
+  file: ${TRAVIS_BUILD_DIR}/lastcall/build/outputs/apk/lastcall-debug.apk
+  on:
+    repo: dinosaurwithakatana/lastcaller
+    branch: master
+    tags: true
+    all_branches: true
